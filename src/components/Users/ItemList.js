@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Button from '../UI/Button'
-import DeleteModal from '../UI/DeleteModal'
 import classes from '../UI/Button.module.css'
+import DeleteModalPortal from '../Modals/DeleteModalPortal'
 
 
 function ItemList(props) {
@@ -12,7 +12,7 @@ function ItemList(props) {
         <li>
             {props.children}
             <Button className={classes.button}  onClick={() => setShowHide(true)} >Delete</Button>
-            {showhide && <DeleteModal  onCancel={()=> setShowHide(false)} onDelete={() =>  props.onDelete(props.id)}/>}
+            {showhide && <DeleteModalPortal  onCancel={()=> setShowHide(false)} onDelete={() =>  props.onDelete(props.id)}/>}
             
         </li>
     )

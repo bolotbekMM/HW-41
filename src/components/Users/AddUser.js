@@ -4,6 +4,7 @@ import Card from '../UI/Card';
 import Button from '../UI/Button';
 import ErrorModal from '../UI/ErrorModal';
 import classes from './AddUser.module.css';
+import ErrorModalPortal from '../Modals/ErrorModalPortal';
 
 const AddUser = (props) => {
   const [enteredUsername, setEnteredUsername] = useState('');
@@ -46,7 +47,7 @@ const AddUser = (props) => {
   return (
     <div>
       {error && (
-        <ErrorModal
+        <ErrorModalPortal
           title={error.title}
           message={error.message}
           onConfirm={errorHandler}

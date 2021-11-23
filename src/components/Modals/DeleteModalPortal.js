@@ -1,6 +1,7 @@
 import React from "react"
 import ReactDOM  from "react-dom";
-import Backdrop from "../../UI/Backdrop";
+import Backdrop from "../UI/Backdrop";
+import DeleteModal from "./DeleteModal";
 
 const DeleteModalPortal = props => {
     return (

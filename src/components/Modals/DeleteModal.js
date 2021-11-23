@@ -1,12 +1,12 @@
 import React from 'react';
-import Card from './Card';
-import Button from './Button';
+import Card from '../UI/Card';
+import Button from '../UI/Button';
 import classes from './ErrorModal.module.css';
 
 const DeleteModal = (props) => {
   return (
     <div>
-      <div className={classes.backdrop}/>
+      <div className={classes.backdrop} onClick={props.onCancel}/>
       <Card className={classes.modal}>
         <header className={classes.header}>
           <h2>Delete this user?</h2>
